@@ -42,8 +42,11 @@ const Brand = styled.div`
 
 const LogoWrapper = styled.div`
   font-size: 4.5rem;
-  ${media.between('small', 'large')`
+  ${media.between('small', 'medium')`
     font-size: 7.25rem;
+  `}
+  ${media.between('medium', 'large')`
+    font-size: 8.125rem;
   `}
   ${media.greaterThan('large')`
     font-size: 9rem;
@@ -77,7 +80,7 @@ const ShortParagraphs = styled.div`
   ${media.greaterThan('large')`
     width: 5rem;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 2rem;
   `}
 `
 
@@ -94,10 +97,10 @@ const SloganWrapper = styled.div`
 const Slogan = styled.div`
   width: 65%;
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   max-width: 13rem;
   ${media.greaterThan('large')`
-    font-size: 2rem;
+    font-size: 1.5rem;
     max-width: none;
     width: auto;
   `}
@@ -142,7 +145,7 @@ class LandingSection extends React.Component {
   componentDidMount() {
     this.effect = window.VANTA.NET({
       el: '#hello',
-      color: '#8080a2',
+      color: '#734369',
       backgroundColor: '#272739',
     })
   }
