@@ -14,7 +14,7 @@ const StyledPath = styled.path`
 const Wordmark = styled.h1`
   font-family: var(--font-family-display);
   font-size: 0.333333333em;
-  width: ${props => props.wordmarkType === 'full' ? '7em' : 'auto'};
+  width: ${props => props.wordmarkType === 'full' ? '7.5em' : 'auto'};
   line-height: 1;
   text-align: left;
 `
