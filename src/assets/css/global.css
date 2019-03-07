@@ -1,0 +1,11 @@
+:root {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-size: var(--size);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+}
