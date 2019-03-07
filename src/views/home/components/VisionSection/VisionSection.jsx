@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const Section = styled.section`
   height: 100vh;
@@ -13,22 +14,45 @@ const CenteredContent = styled.div`
   justify-content: center;
   align-items: center;
   flex: auto;
-  padding: 0 8rem;
   font-weight: 300;
+  flex-direction: column;
+  ${media.greaterThan('large')`
+    flex-direction: row;
+    padding: 0 8rem;
+  `}
 `
 
 const Halfling = styled.div`
   flex: auto;
   padding: 0 5vw;
+  text-align: center;
+  ${media.greaterThan('large')`
+    text-align: left;
+  `}
 `
 
 const ContentArea = styled.div`
-  font-size: 1.25rem;
+  font-size: 1rem;
+  ${media.greaterThan('small')`
+    font-size: 1.25rem;
+  `}
+`
+
+const TitleHalfling = styled(Halfling)`
+  display: flex;
+  align-items: flex-end;
+  ${media.greaterThan('large')`
+    display: block;
+  `}
 `
 
 const Title = styled.h2`
-  padding-left: 8rem;
-  font-size: 5rem;
+  font-size: 3rem;
+  margin: 0;
+  ${media.greaterThan('large')`
+    padding-left: 8rem;
+    font-size: 5rem;
+  `}
 `
 
 const PowerDescriptors = styled.mark`
@@ -41,13 +65,13 @@ function VisionSection() {
   return (
     <Section>
       <CenteredContent>
-        <Halfling>
+        <TitleHalfling>
           <ContentArea>
             <Title>
               Vision
             </Title>
           </ContentArea>
-        </Halfling>
+        </TitleHalfling>
         <Halfling>
           <ContentArea>
             The Guild orients itself to becoming a <PowerDescriptors>thriving</PowerDescriptors> community

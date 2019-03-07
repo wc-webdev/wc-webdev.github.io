@@ -10,18 +10,30 @@ const Section = styled.section`
 `
 
 const CenteredContent = styled.div`
-  height: 100%;
+  height: 0;
   display: flex;
-  align-items: center;
-  width: 0;
+  justify-content: center;
   flex: auto;
   padding: 0 1rem;
+  align-items: flex-end;
+  ${media.greaterThan('large')`
+    width: 0;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  `}
 `
 
 const WideCenteredContent = styled(CenteredContent)`
-  width: 50%;
+  height: 75%;
   flex: 0 1 auto;
   justify-content: center;
+  align-items: center;
+  ${media.greaterThan('large')`
+    width: 50%;
+    height: auto;
+    justify-content: center;
+  `}
 `
 
 const Brand = styled.div`
@@ -29,12 +41,12 @@ const Brand = styled.div`
 `
 
 const LogoWrapper = styled.div`
-  font-size: 2.5rem;
-  ${media.between('medium', 'large')`
-    font-size: 5rem;
+  font-size: 4.5rem;
+  ${media.between('small', 'large')`
+    font-size: 7.25rem;
   `}
   ${media.greaterThan('large')`
-    font-size: 7.5rem;
+    font-size: 9rem;
   `}
 `
 
@@ -49,14 +61,24 @@ const VerticalFlex = styled.div`
 
 const HorizontalFlex = styled.div`
   display: flex;
-  height: 35%;
+  flex-direction: column-reverse;
+  height: 65%;
+  ${media.greaterThan('large')`
+    flex-direction: row;
+    height: 35%;
+  `}
 `
 
 const ShortParagraphs = styled.div`
   font-family: var(--font-family-display);
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1;
-  width: 5rem;
+  text-align: center;
+  ${media.greaterThan('large')`
+    width: 5rem;
+    text-align: left;
+    font-size: 1.5rem;
+  `}
 `
 
 const SloganWrapper = styled.div`
@@ -69,13 +91,32 @@ const SloganWrapper = styled.div`
   font-family: var(--font-family-display);
 `
 
-const Slogan = styled.mark`
+const Slogan = styled.div`
+  width: 65%;
+  line-height: 1;
+  font-size: 1.5rem;
+  max-width: 13rem;
+  ${media.greaterThan('large')`
+    font-size: 2rem;
+    max-width: none;
+    width: auto;
+  `}
+`
+
+const SloganEmphasis = styled.mark`
   display: inline-block;
   background-color: var(--color-fg);
   color: var(--color-bg);
-  padding: 5rem 0.5rem 0.5rem;
+  padding: 0.25em 0.35em 0.25em;
+  margin-left: -0.35em;
   line-height: 1;
-  text-align: right;
+  text-align: left;
+  width: 100%;
+  ${media.greaterThan('large')`
+    width: auto;
+    padding: 4.5em 0.35em 0.25em;
+    margin: 0;
+  `}
 `
 
 const Background = styled.div`
@@ -84,6 +125,13 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+`
+
+const SloganEmphasisFragment = styled.span`
+  display: block;
+  ${media.greaterThan('large')`
+    display: inline;
+  `}
 `
 
 class LandingSection extends React.Component {
@@ -137,9 +185,9 @@ class LandingSection extends React.Component {
             </CenteredContent>
           </HorizontalFlex>
           <SloganWrapper>
-            <div>
-              Untangling the <Slogan>Multifaceted</Slogan> Web
-            </div>
+            <Slogan>
+              Untangling the <SloganEmphasis><SloganEmphasisFragment>Multi</SloganEmphasisFragment><SloganEmphasisFragment>faceted</SloganEmphasisFragment></SloganEmphasis> Web
+            </Slogan>
           </SloganWrapper>
         </VerticalFlex>
       </Section>

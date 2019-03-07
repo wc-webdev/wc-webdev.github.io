@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query';
 
 const Section = styled.section`
   height: 100vh;
@@ -13,27 +14,45 @@ const CenteredContent = styled.div`
   justify-content: center;
   align-items: center;
   flex: auto;
-  padding: 0 8rem;
   font-weight: 300;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  ${media.greaterThan('large')`
+    flex-direction: row-reverse;
+    padding: 0 8rem;
+  `}
 `
 
 const Halfling = styled.div`
   flex: auto;
   padding: 0 5vw;
+  text-align: center;
+  ${media.greaterThan('large')`
+    text-align: left;
+  `}
 `
 
 const ContentArea = styled.div`
-  font-size: 1.25rem;
+  font-size: 1rem;
+  ${media.greaterThan('small')`
+    font-size: 1.25rem;
+  `}
 `
 
 const Title = styled.h2`
-  font-size: 5rem;
-  padding-right: 4rem;
+  font-size: 3rem;
+  margin: 0;
+  ${media.greaterThan('large')`
+    padding-right: 4rem;
+    font-size: 5rem;
+  `}
 `
 
-const Content = styled.p`
-  
+const TitleHalfling = styled(Halfling)`
+  display: flex;
+  align-items: flex-end;
+  ${media.greaterThan('large')`
+    display: block;
+  `}
 `
 
 const PowerDescriptors = styled.mark`
@@ -46,18 +65,16 @@ function MissionSection() {
   return (
     <Section>
       <CenteredContent>
-        <Halfling>
+        <TitleHalfling>
           <ContentArea>
             <Title>
               Mission
             </Title>
           </ContentArea>
-        </Halfling>
+        </TitleHalfling>
         <Halfling>
           <ContentArea>
-            <Content>
-              The Guild; through <PowerDescriptors>uniting</PowerDescriptors> and <PowerDescriptors>synthesizing</PowerDescriptors> the paradigms and best practices of Web development, <PowerDescriptors>curates</PowerDescriptors> relevant knowledge to <PowerDescriptors>simplify</PowerDescriptors> challenges; and <PowerDescriptors>transform</PowerDescriptors> the Members, the Company, the industry, and the country towards the strong tradition of progressive and innovative nature of the Web platform.
-            </Content>
+            The Guild; through <PowerDescriptors>uniting</PowerDescriptors> and <PowerDescriptors>synthesizing</PowerDescriptors> the paradigms and best practices of Web development, <PowerDescriptors>curates</PowerDescriptors> relevant knowledge to <PowerDescriptors>simplify</PowerDescriptors> challenges; and <PowerDescriptors>transform</PowerDescriptors> the Members, the Company, the industry, and the country towards the strong tradition of progressive and innovative nature of the Web platform.
           </ContentArea>
         </Halfling>
       </CenteredContent>
