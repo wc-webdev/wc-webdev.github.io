@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f36ba220814beaf716c3",
-    "url": "/static/css/main.b08c4212.chunk.css"
+    "revision": "8b5f9165228099597d7e",
+    "url": "/static/css/main.08c76831.chunk.css"
   },
   {
-    "revision": "f36ba220814beaf716c3",
-    "url": "/static/js/main.79cccea7.chunk.js"
+    "revision": "8b5f9165228099597d7e",
+    "url": "/static/js/main.143c4700.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.c5541365.js"
   },
   {
-    "revision": "0be773324eff98ef8919",
+    "revision": "cab2644862c231453721",
     "url": "/static/css/2.b0f61953.chunk.css"
   },
   {
-    "revision": "0be773324eff98ef8919",
-    "url": "/static/js/2.fa1ae307.chunk.js"
+    "revision": "cab2644862c231453721",
+    "url": "/static/js/2.db8bf8b7.chunk.js"
   },
   {
     "revision": "08caed581ead3f1b6f36b481350a5194",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/DDCHardware-Condensed.363148e7.otf"
   },
   {
-    "revision": "accd229012bbbbf5f3184b5e879f935d",
+    "revision": "a00d20756e93ca0f3a50401ee6d07d22",
     "url": "/index.html"
   }
 ];
