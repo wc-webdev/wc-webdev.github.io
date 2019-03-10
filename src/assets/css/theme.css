@@ -8,6 +8,8 @@
   --color-accent-earth: #54AA3F;
   --color-accent-fire: #DE6735;
   --color-accent-water: #327CD1;
+  --color-bg-active: #faee5b;
+  --color-fg-active: #675F2A;
 
   --transition-duration: 300ms;
   --transition-timing-function: ease;

@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   background-color: var(--color-bg);
   color: var(--color-fg);
@@ -9,4 +13,10 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-display);
+  line-height: 1;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

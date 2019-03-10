@@ -3,7 +3,8 @@ import { Provider, } from 'react-redux'
 import { ConnectedRouter, } from 'connected-react-router'
 import { Switch, Route, Redirect, } from 'react-router'
 
-import MainView from './views/home/components/MainView/MainView'
+import Home from './views/home/components/MainView/MainView'
+import About from './views/about/components/MainView/MainView'
 
 function App(props) {
   const {
@@ -30,7 +31,11 @@ function App(props) {
           />
           <Route
             path="/home"
-            component={MainView}
+            component={Home}
+          />
+          <Route
+            path="/about"
+            component={About}
           />
         </Switch>
       </ConnectedRouter>
