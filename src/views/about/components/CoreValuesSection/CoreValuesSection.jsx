@@ -25,7 +25,7 @@ const Foreground = styled.div`
 
 const Content = styled.div`
   max-width: 60rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0 auto;
   min-height: 100%;
   &::before {
@@ -44,6 +44,9 @@ const Content = styled.div`
     width: 0;
     display: block;
   }
+  ${media.greaterThan('medium')`
+    padding: 0 2rem;
+  `}
 `
 
 const CoreValuesWrapper = styled.div`

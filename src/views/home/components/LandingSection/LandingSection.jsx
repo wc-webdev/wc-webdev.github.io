@@ -23,8 +23,13 @@ const Foreground = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   ${media.greaterThan('medium')`
     padding: 0;
+    display: block;
   `}
 `
 
@@ -85,12 +90,10 @@ const TitlesCell = styled.span`
 `
 
 const TitleContent = styled.span`
-  
   ${media.greaterThan('medium')`
     display: block;
     width: 0;
     line-height: 1;
-    
   `}
 `
 
@@ -109,13 +112,16 @@ const Slogan = styled.div`
   font-family: var(--font-family-display);
   line-height: 1;
   font-size: 1.25rem;
+  width: 15rem;
+  margin: 0 auto;
   ${media.greaterThan('medium')`
-    margin-top: 10%;
+    margin: 10% 0 0;
+    width: auto;
   `}
 `
 
 const Cta = styled(LinkButton)`
-  margin: 1rem 0;
+  margin: 1rem 0 0;
   display: flex;
   ${media.greaterThan('medium')`
     margin: 0 1rem;
