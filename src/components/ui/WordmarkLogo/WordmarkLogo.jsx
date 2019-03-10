@@ -6,7 +6,7 @@ import Logo from '../Logo/Logo'
 
 const SvgBase = styled(Logo)`
   margin-bottom: 0.0625em;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('small')`
     margin-right: 0.125em;
     margin-bottom: 0;
   `}
@@ -31,7 +31,7 @@ const Wordmark = styled.h1`
     `
   }}
   
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('small')`
     text-align: left;
     font-size: 0.28125em;
   `}
@@ -46,7 +46,7 @@ const Base = styled.div`
   user-select: none;
   cursor: default;
   flex-direction: column;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('small')`
     flex-direction: row;
   `}
 `

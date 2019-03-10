@@ -52,7 +52,10 @@ const HeadingsWrapper = styled.div`
 const LogoWrapper = styled.div`
   font-size: 8rem;
   line-height: 0;
-  margin: 4rem 0;
+  margin: 2rem 0;
+  ${media.greaterThan('small')`
+    margin: 1rem 0;
+  `}
   ${media.greaterThan('medium')`
     margin: 0;
     width: 0;
@@ -62,16 +65,29 @@ const LogoWrapper = styled.div`
     align-items: center;
     line-height: var(--line-height-base);
   `}
+  ${media.greaterThan('large')`
+    font-size: 10rem;
+  `}
 `
 
 const TitlesWrapper = styled.h2`
   font-size: 1.125rem;
   margin: 0;
+  ${media.greaterThan('small')`
+    display: flex;
+  `}
+  ${media.between('small', 'medium')`
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+  `}
   ${media.greaterThan('medium')`
     width: 0;
     flex: auto;
-    display: flex;
     font-size: 1.5rem;
+  `}
+  ${media.greaterThan('large')`
+    font-size: 1.75rem;
   `}
 `
 
@@ -79,7 +95,7 @@ const TitlesCell = styled.span`
   display: block;
   text-align: center;
   margin: 0.5rem 0;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('small')`
     display: flex;
     width: 0;
     flex: auto;
@@ -90,21 +106,34 @@ const TitlesCell = styled.span`
 `
 
 const TitleContent = styled.span`
+  ${media.greaterThan('small')`
+    width: 11rem;
+    margin: 0 auto;
+    text-align: center;
+  `}
   ${media.greaterThan('medium')`
     display: block;
+    margin: 0;
     width: 0;
     line-height: 1;
+    text-align: left;
   `}
 `
 
 const CtaWrapper = styled.div`
   text-align: center;
+  margin: 0 -0.5rem;
+  
+  ${media.greaterThan('small')`
+    width: 100%;
+    margin: 0;
+  `}
+  
   ${media.greaterThan('medium')`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 50%;
+    height: 55%;
   `}
 `
 
@@ -121,17 +150,23 @@ const Slogan = styled.div`
 `
 
 const Cta = styled(LinkButton)`
-  margin: 1rem 0 0;
+  margin: 1rem 0.5rem 0;
   display: flex;
-  ${media.greaterThan('medium')`
-    margin: 0 1rem;
+  ${media.greaterThan('small')`
     display: inline-flex;
     width: 12rem;
+    margin: 0 0.5rem;
+  `}
+  ${media.greaterThan('medium')`
+    margin: 0 1rem;
   `}
 `
 
 const CtaContainer = styled.div`
-  margin-top: 5%;
+  margin-top: 1rem;
+  ${media.greaterThan('medium')`
+    margin-top: 5%;
+  `}
 `
 
 class LandingSection extends React.Component {

@@ -16,29 +16,29 @@ const StyledAbsoluteLink = styled.a`
   padding: 0 2rem;
   
   ${props => {
-  let bgColor
-  let borderColor
-  let fgColor
-
-  switch (props.variant) {
-    case 'primary':
-      bgColor = 'var(--color-fg)'
-      borderColor = 'var(--color-fg)'
-      fgColor = 'var(--color-bg)'
-      break
-    default:
-      bgColor = 'transparent'
-      borderColor = 'var(--color-fg)'
-      fgColor = 'var(--color-fg)'
-      break
-  }
-
-  return `
-      background-color: ${bgColor};
-      border-color: ${borderColor};
-      color: ${fgColor};
-    `
-}}
+    let bgColor
+    let borderColor
+    let fgColor
+  
+    switch (props.variant) {
+      case 'primary':
+        bgColor = 'var(--color-fg)'
+        borderColor = 'var(--color-fg)'
+        fgColor = 'var(--color-bg)'
+        break
+      default:
+        bgColor = 'transparent'
+        borderColor = 'var(--color-fg)'
+        fgColor = 'var(--color-fg)'
+        break
+    }
+  
+    return `
+        background-color: ${bgColor};
+        border-color: ${borderColor};
+        color: ${fgColor};
+      `
+  }}
   
   &:active {
     background-color: var(--color-bg-active);

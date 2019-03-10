@@ -37,8 +37,11 @@ const Content = styled.div`
 `
 
 const LogoWrapper = styled.div`
-  font-size: 10em;
+  font-size: 8em;
   line-height: 1;
+  ${media.greaterThan('medium')`
+    font-size: 10em;
+  `}
 `
 
 const Text = styled.p`
@@ -46,6 +49,7 @@ const Text = styled.p`
   max-width: 40rem;
   font-size: 1.125rem;
   font-weight: 300;
+  margin-bottom: 0;
   ${media.greaterThan('medium')`
     font-size: 1.5rem;
   `}
