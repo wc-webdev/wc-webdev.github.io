@@ -66,7 +66,7 @@ function MarketingSection() {
               <Logo />
             </LogoWrapper>
             <Text>
-              Being the largest guild with over 23 members and counting, the Order of the White Lotus is a democratic
+              With over 27 members and counting, the Order of the White Lotus is a democratic
               guild committed to excellence and career growth of its Members and the Company through exercising its tenets and
               values.
             </Text>
