@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import Logo from '../../../../components/ui/Logo/Logo'
+import Logo from '../../../../components/brand/Logo/Logo'
 
 const Section = styled.section`
   height: 100vh;

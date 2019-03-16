@@ -1,4 +1,7 @@
 import * as React from 'react'
+
+import View from '../../../../components/ui/View/View'
+
 import MarketingSection from '../MarketingSection/MarketingSection'
 import MissionSection from '../MissionSection/MissionSection'
 import VisionSection from '../VisionSection/VisionSection'
@@ -6,12 +9,12 @@ import CoreValuesSection from '../CoreValuesSection/CoreValuesSection'
 
 function MainView(props) {
   return (
-    <main>
+    <View>
       <MarketingSection />
       <MissionSection />
       <VisionSection />
       <CoreValuesSection />
-    </main>
+    </View>
   )
 }
 

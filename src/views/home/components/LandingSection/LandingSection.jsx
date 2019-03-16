@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import WordmarkLogo from '../../../../components/ui/WordmarkLogo/WordmarkLogo'
+import WordmarkLogo from '../../../../components/brand/WordmarkLogo/WordmarkLogo'
 import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
 
 const Section = styled.section`
@@ -54,9 +54,15 @@ const LogoWrapper = styled.div`
   line-height: 0;
   margin: 2rem 0;
   ${media.greaterThan('small')`
-    margin: 1rem 0;
+    @media (orientation: portrait) {
+      margin: 4rem 0;
+    }
+    @media (orientation: landscape) {
+      margin: 1rem 0;
+    }
   `}
   ${media.greaterThan('medium')`
+    font-size: 6rem;
     margin: 0;
     width: 0;
     flex: auto;
@@ -175,15 +181,15 @@ class LandingSection extends React.Component {
   }
 
   componentDidMount() {
-    this.effect = window.VANTA.NET({
-      el: `#${this.state.id}`,
-      color: '#734369',
-      backgroundColor: '#272739',
-    })
+    //this.effect = window.VANTA.NET({
+    //  el: `#${this.state.id}`,
+    //  color: '#734369',
+    //  backgroundColor: '#272739',
+    //})
   }
 
   componentWillUnmount() {
-    this.effect.destroy()
+    //this.effect.destroy()
   }
 
   render() {
@@ -210,7 +216,7 @@ class LandingSection extends React.Component {
               </TitlesCell>
               <TitlesCell>
                 <TitleContent>
-                  Web Development Group
+                  Web Development Guild
                 </TitleContent>
               </TitlesCell>
             </TitlesWrapper>

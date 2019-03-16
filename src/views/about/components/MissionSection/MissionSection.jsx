@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query';
+import media from 'styled-media-query'
 
 const Section = styled.section`
   height: 100vh;
