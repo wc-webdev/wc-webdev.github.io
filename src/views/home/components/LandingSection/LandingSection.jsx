@@ -181,15 +181,15 @@ class LandingSection extends React.Component {
   }
 
   componentDidMount() {
-    //this.effect = window.VANTA.NET({
-    //  el: `#${this.state.id}`,
-    //  color: '#734369',
-    //  backgroundColor: '#272739',
-    //})
+    this.effect = window.VANTA.NET({
+      el: `#${this.state.id}`,
+      color: '#734369',
+      backgroundColor: '#272739',
+    })
   }
 
   componentWillUnmount() {
-    //this.effect.destroy()
+    this.effect.destroy()
   }
 
   render() {
