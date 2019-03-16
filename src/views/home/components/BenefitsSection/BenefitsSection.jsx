@@ -90,9 +90,9 @@ const SectionSubtitle = styled.h3`
 `
 
 const SectionDescription = styled.p`
-  font-weight: 300;
   ${media.greaterThan('medium')`
     font-size: 1.5rem;
+    font-weight: var(--font-weight-light-base);
   `}
 `
 

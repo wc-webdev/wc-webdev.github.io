@@ -140,11 +140,13 @@ const CtaWrapper = styled.div`
     bottom: 0;
     left: 0;
     height: 55%;
+    @media (min-aspect-ratio: 2/1) {
+      height: 65%;
+    }
   `}
-`
+`;
 
 const Slogan = styled.div`
-  font-family: var(--font-family-display);
   line-height: 1;
   font-size: 1.25rem;
   width: 15rem;
@@ -223,7 +225,7 @@ class LandingSection extends React.Component {
           </HeadingsWrapper>
           <CtaWrapper>
             <Slogan>
-              "Untangling the Multifaceted Web"
+              Untangling the Multifaceted Web
             </Slogan>
             <CtaContainer>
               <Cta

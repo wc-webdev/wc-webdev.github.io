@@ -4,8 +4,8 @@ import media from 'styled-media-query'
 
 
 const Section = styled.section`
-  height: 100vh;
   position: relative;
+  height: 100vh;
 `
 
 const Background = styled.div`
@@ -53,9 +53,10 @@ const Title = styled.h2`
 `
 
 const Content = styled.p`
-  font-weight: 300;
+  font-weight: var(--font-weight-normal-base);
   font-size: 1.125rem;
   ${media.greaterThan('medium')`
+    font-weight: var(--font-weight-light-base);
     font-size: 1.5rem;
     margin: 0 2rem 0 0;
     width: 0;
@@ -63,6 +64,16 @@ const Content = styled.p`
     display: flex;
     align-items: center;
     height: 100%;
+    @media (min-aspect-ratio: 2/1) { 
+      font-size: 1.125rem;
+      font-weight: var(--font-weight-normal-base);
+    }
+  `}
+  ${media.greaterThan('large')`
+    @media (min-aspect-ratio: 2/1) {
+      font-weight: var(--font-weight-light-base);
+      font-size: 1.5rem;
+    }
   `}
 `
 

@@ -14,7 +14,11 @@
   --transition-duration: 300ms;
   --transition-timing-function: ease;
   --font-family-display: DDCHardware, sans-serif;
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /*--font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;*/
+  --font-family-base: Raleway, sans-serif;
+
+  --font-weight-normal-base: 500;
+  --font-weight-light-base: 300;
 
   --line-height-base: 2;
   --letter-spacing-base: 0;

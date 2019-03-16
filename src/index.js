@@ -7,6 +7,7 @@ import { compose, } from 'redux'
 import 'normalize.css'
 
 import './assets/css/fonts/DDCHardware.css'
+import './assets/css/fonts/Raleway.css'
 import './assets/css/theme.css'
 import './assets/css/global.css'
 
