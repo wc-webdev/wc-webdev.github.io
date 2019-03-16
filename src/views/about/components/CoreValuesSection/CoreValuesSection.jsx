@@ -34,7 +34,7 @@ const Content = styled.div`
     overflow: hidden;
     height: 0;
     width: 0;
-    display: block;
+    display: inline-block;
   }
   &::after {
     // to prevent margin collapsing
@@ -42,7 +42,7 @@ const Content = styled.div`
     overflow: hidden;
     height: 0;
     width: 0;
-    display: block;
+    display: inline-block;
   }
   ${media.greaterThan('medium')`
     padding: 0 2rem;

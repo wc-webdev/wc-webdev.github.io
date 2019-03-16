@@ -9,7 +9,7 @@ function MainView(props) {
   return (
     <View>
       <LandingSection />
-      {/*<BenefitsSection />*/}
+      <BenefitsSection />
     </View>
   )
 }
