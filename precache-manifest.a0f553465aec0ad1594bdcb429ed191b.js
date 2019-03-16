@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0f8b2b9d92932e06f776",
+    "revision": "836ca23e8c0b275323bc",
     "url": "/static/css/main.08c76831.chunk.css"
   },
   {
-    "revision": "0f8b2b9d92932e06f776",
-    "url": "/static/js/main.5388cec0.chunk.js"
+    "revision": "836ca23e8c0b275323bc",
+    "url": "/static/js/main.14f68eca.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/DDCHardware-Compressed.08caed58.otf"
   },
   {
-    "revision": "070653b7587d2ce72d06d592c74aa1f6",
+    "revision": "b971a350882f8d4af6df533b7ba3600e",
     "url": "/index.html"
   }
 ];
