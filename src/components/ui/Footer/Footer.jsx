@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { Link, } from 'react-router-dom'
 
 import WordmarkLogo from '../../brand/WordmarkLogo/WordmarkLogo'
 import WhiteCloakLogo from '../../brand/WhiteCloakLogo/WhiteCloakLogo'
@@ -16,7 +17,7 @@ const Base = styled.footer`
 `
 
 const Container = styled.div`
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   max-width: 48rem;
   margin: 0 auto;
   ${media.greaterThan('medium')`
@@ -48,6 +49,9 @@ const FooterContent = styled.div`
 const LogoWrapper = styled.div`
   font-size: 4rem;
   margin-right: 0.5rem;
+  ${media.greaterThan('small')`
+    margin-right: 0;
+  `}
 `
 
 const WhiteCloakLogoWrapper = styled.div`
@@ -79,6 +83,53 @@ const Copyright = styled.div`
 
 const WhiteCloakWordmark = styled.div`
   font-family: var(--font-family-display);
+  white-space: nowrap;
+`
+
+const NavRow = styled.nav`
+  margin: 0.5rem 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+const NavColumn = styled.div`
+  margin: 0.5em 0;
+  width: 50%;
+  ${media.greaterThan('medium')`
+    width: auto;
+  `}
+`
+
+const NavItem = styled.div`
+  margin: 0;
+`
+
+const NavHeader = styled.h2`
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light-base);
+`
+
+const NavLink = styled(Link)`
+  &:link {
+    color: inherit;
+  }
+  
+  &:visited {
+    color: inherit;
+  }
+`
+
+const NavAbsoluteLink = styled.a`
+   &:link {
+    color: inherit;
+  }
+  
+  &:visited {
+    color: inherit;
+  }
 `
 
 function Footer() {
@@ -121,6 +172,114 @@ function Footer() {
             </WhiteCloakFooterContent>
           </Cell>
         </Row>
+        <NavRow>
+          <NavColumn>
+            <NavHeader>
+              Guild
+            </NavHeader>
+            <NavItem>
+              <NavLink
+                to="/about"
+              >
+                About
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/home#sectionBenefits"
+              >
+                Benefits
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/about#sectionMembership"
+              >
+                Membership
+              </NavLink>
+            </NavItem>
+          </NavColumn>
+          <NavColumn>
+            <NavHeader>
+              Charter
+            </NavHeader>
+            <NavItem>
+              <NavLink
+                to="/about#sectionMission"
+              >
+                Mission &amp; Vision
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/about#sectionCoreValues"
+              >
+                Core Values
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/about#sectionTribes"
+              >
+                Tribes
+              </NavLink>
+            </NavItem>
+          </NavColumn>
+          <NavColumn>
+            <NavHeader>
+              Members
+            </NavHeader>
+            <NavItem>
+              <NavLink
+                to="/events"
+              >
+                Events
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/downloads"
+              >
+                Downloads
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/blog"
+              >
+                Blog
+              </NavLink>
+            </NavItem>
+          </NavColumn>
+          <NavColumn>
+            <NavHeader>
+              Links
+            </NavHeader>
+            <NavItem>
+              <NavAbsoluteLink
+                href="https://github.com/wc-webdev"
+                target="_blank"
+              >
+                GitHub
+              </NavAbsoluteLink>
+            </NavItem>
+            <NavItem>
+              <NavAbsoluteLink
+                href="https://www.whitecloak.com"
+                target="_blank"
+              >
+                Company Website
+              </NavAbsoluteLink>
+            </NavItem>
+            <NavItem>
+              <NavAbsoluteLink
+                href="mailto:wdg@whitecloak.com"
+              >
+                Email
+              </NavAbsoluteLink>
+            </NavItem>
+          </NavColumn>
+        </NavRow>
         <Copyright>
           Copyright &copy; {copyrightYear} Order&nbsp;of&nbsp;the&nbsp;White&nbsp;Lotus. All&nbsp;Rights&nbsp;Reserved.
         </Copyright>

@@ -7,9 +7,15 @@ import BenefitsSection from '../BenefitsSection/BenefitsSection'
 
 function MainView(props) {
   return (
-    <View>
-      <LandingSection />
-      <BenefitsSection />
+    <View
+      {...props}
+    >
+      <LandingSection
+        id="sectionLanding"
+      />
+      <BenefitsSection
+        id="sectionBenefits"
+      />
     </View>
   )
 }

@@ -8,19 +8,23 @@ const Section = styled.section`
 `
 
 const Background = styled.div`
-  background-color: var(--color-fg);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  ${Section}:nth-child(2n) > & {
+    background-color: var(--color-fg);
+  }
 `
 
 const Foreground = styled.div`
-  color: var(--color-bg);
   width: 100%;
   min-height: 100%;
   position: relative;
+  ${Section}:nth-child(2n) > & {
+    color: var(--color-bg);
+  }
 `
 
 const Content = styled.div`
@@ -86,9 +90,11 @@ const CoreValueDescription = styled.p`
   margin: 0;
 `
 
-function CoreValuesSection() {
+function CoreValuesSection(props) {
   return (
-    <Section>
+    <Section
+      {...props}
+    >
       <Background />
       <Foreground>
         <Content>

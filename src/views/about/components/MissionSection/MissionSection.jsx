@@ -13,14 +13,18 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-fg);
+  ${Section}:nth-child(2n) > & {
+    background-color: var(--color-fg);
+  }
 `
 
 const Foreground = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  color: var(--color-bg);
+  ${Section}:nth-child(2n) > & {
+    color: var(--color-bg);
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -81,9 +85,11 @@ const Content = styled.p`
   `}
 `
 
-function MissionSection() {
+function MissionSection(props) {
   return (
-    <Section>
+    <Section
+      {...props}
+    >
       <Background />
       <Foreground>
         <ContentWrapper>
@@ -91,7 +97,9 @@ function MissionSection() {
             Mission
           </Title>
           <Content>
-            The Guild; through uniting and synthesizing the paradigms and best practices of Web development, curates relevant knowledge to simplify challenges; and transform the Members, the Company, the industry, and the country towards the strong tradition of progressive and innovative nature of the Web platform.
+            The Guild; through uniting and synthesizing the paradigms and best practices of Web development, curates
+            relevant knowledge to simplify challenges; and transform the Members, the Company, the industry, and the
+            country towards the strong tradition of progressive and innovative nature of the Web platform.
           </Content>
         </ContentWrapper>
       </Foreground>

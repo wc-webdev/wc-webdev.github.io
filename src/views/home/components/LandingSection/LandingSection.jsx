@@ -16,6 +16,9 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  ${Section}:nth-child(2n) > & {
+    background-color: var(--color-fg);
+  }
 `
 
 const Foreground = styled.div`
@@ -31,6 +34,9 @@ const Foreground = styled.div`
     padding: 0;
     display: block;
   `}
+  ${Section}:nth-child(2n) > & {
+    color: var(--color-bg);
+  }
 `
 
 const HeadingsWrapper = styled.div`
@@ -179,7 +185,7 @@ const CtaContainer = styled.div`
 
 class LandingSection extends React.Component {
   state = {
-    id: 'hello'
+    id: 'f'
   }
 
   componentDidMount() {
@@ -198,7 +204,7 @@ class LandingSection extends React.Component {
     const { id, } = this.state
     return (
       <Section
-        id={id}
+        {...this.props}
       >
         <Background
           id={id}

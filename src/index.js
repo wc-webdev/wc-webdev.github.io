@@ -49,7 +49,6 @@ const STORE = new Store({
   ],
 })
 
-
 renderApp(
   {
     name: 'Order of the White Lotus',

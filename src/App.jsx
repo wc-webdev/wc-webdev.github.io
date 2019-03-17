@@ -37,6 +37,9 @@ function App(props) {
             path="/about"
             component={About}
           />
+          <Route
+            path="/membership"
+          />
         </Switch>
       </ConnectedRouter>
     </Provider>

@@ -13,14 +13,18 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-fg);
+  ${Section}:nth-child(2n) > & {
+    background-color: var(--color-fg);
+  }
 `
 
 const Foreground = styled.div`
   width: 100%;
   min-height: 100%;
   position: relative;
-  color: var(--color-bg);
+  ${Section}:nth-child(2n) > & {
+    color: var(--color-bg);
+  }
 `
 
 const Content = styled.div`
@@ -66,14 +70,18 @@ const SectionTitleDummy = styled.div`
 `
 
 const SectionContentWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  ${media.greaterThan('medium')`
+    display: flex;
+    align-items: center;
+  `}
 `
 
 const SectionContentWrapperAlt = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
+  ${media.greaterThan('medium')`
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  `}
 `
 
 const SectionContent = styled.div`
@@ -106,9 +114,11 @@ const ContentForeground = styled.div`
   position: relative;
 `
 
-function BenefitsSection() {
+function BenefitsSection(props) {
   return (
-    <Section>
+    <Section
+      {...props}
+    >
       <Background />
       <Foreground>
         <Content>

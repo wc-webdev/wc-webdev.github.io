@@ -15,12 +15,18 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  ${Section}:nth-child(2n) > & {
+    background-color: var(--color-fg);
+  }
 `
 
 const Foreground = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  ${Section}:nth-child(2n) > & {
+    color: var(--color-bg);
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -66,9 +72,11 @@ const Text = styled.p`
   `}
 `
 
-function MarketingSection() {
+function MarketingSection(props) {
   return (
-    <Section>
+    <Section
+      {...props}
+    >
       <Background />
       <Foreground>
         <ContentWrapper>
