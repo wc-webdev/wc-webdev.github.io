@@ -1,7 +1,7 @@
-import { createBrowserHistory, } from 'history'
+import { createHashHistory, } from 'history'
 
 function History() {
-  const history = createBrowserHistory()
+  const history = createHashHistory()
   history.listen(() => {
     window.scrollTo(0, 0)
   })
