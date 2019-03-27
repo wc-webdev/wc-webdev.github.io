@@ -33,22 +33,6 @@ const Content = styled.div`
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
-  &::before {
-    // to prevent margin collapsing
-    content: ' ';
-    overflow: hidden;
-    height: 0;
-    width: 0;
-    display: inline-block;
-  }
-  &::after {
-    // to prevent margin collapsing
-    content: ' ';
-    overflow: hidden;
-    height: 0;
-    width: 0;
-    display: inline-block;
-  }
   ${media.greaterThan('medium')`
     padding: 0 2rem;
   `}
@@ -56,9 +40,9 @@ const Content = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 1.5rem;
+  padding-top: 4rem;
   ${media.greaterThan('medium')`
     font-size: 2rem;
-    padding-top: 4rem;
   `}
 `
 
@@ -93,6 +77,7 @@ const SectionContent = styled.div`
 const SectionSubtitle = styled.h3`
   font-size: 2rem;
   font-stretch: condensed;
+  width: 0;
   ${media.greaterThan('medium')`
     font-size: 3rem;
   `}
