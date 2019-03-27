@@ -78,11 +78,12 @@ const CoreValueTitle = styled.h3`
 `
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
-  padding-top: 4rem;
+  font-size: 2.5rem;
+  font-stretch: condensed;
   ${media.greaterThan('medium')`
     font-size: 3rem;
     margin: 0 0 4rem;
+    padding-top: 4rem;
   `}
 `
 

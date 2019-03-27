@@ -154,12 +154,15 @@ const CtaWrapper = styled.div`
 
 const Slogan = styled.div`
   line-height: 1;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   width: 15rem;
   margin: 0 auto;
+  font-family: var(--font-family-display);
+  font-stretch: condensed;
   ${media.greaterThan('medium')`
     margin: 10% 0 0;
     width: auto;
+    font-size: 2rem;
   `}
 `
 

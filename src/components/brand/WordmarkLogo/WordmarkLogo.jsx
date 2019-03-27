@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { css, } from 'styled-components'
 import media from 'styled-media-query'
 
 import Logo from '../Logo/Logo'
@@ -18,18 +18,9 @@ const Wordmark = styled.h1`
   line-height: 1;
   text-align: center;
   margin: 0;
-  ${props => {
-    switch (props.wordmarkType) {
-      case 'full':
-        return `
-          width: 7.5em;
-        `
-      default:
-    }
-    return `
-      width: auto;
-    `
-  }}
+  ${props => props.wordmarkType === 'full' && css`
+    width: 7.5em;
+  `}
   
   ${media.greaterThan('small')`
     text-align: left;

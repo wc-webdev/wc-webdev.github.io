@@ -79,6 +79,7 @@ const Copyright = styled.div`
   text-align: center;
   margin-top: 3rem;
   line-height: 1.5;
+  font-size: 0.875rem;
 `
 
 const WhiteCloakWordmark = styled.div`
@@ -91,6 +92,7 @@ const NavRow = styled.nav`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-size: 0.875rem;
 `
 
 const NavColumn = styled.div`
@@ -109,7 +111,7 @@ const NavHeader = styled.h2`
   font-size: 1.25rem;
   margin: 1rem 0;
   font-family: var(--font-family-base);
-  font-weight: var(--font-weight-light-base);
+  font-weight: var(--font-weight-normal-base);
 `
 
 const NavLink = styled(Link)`
@@ -179,6 +181,13 @@ function Footer() {
             </NavHeader>
             <NavItem>
               <NavLink
+                to="/home"
+              >
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
                 to="/about"
               >
                 About
@@ -186,14 +195,14 @@ function Footer() {
             </NavItem>
             <NavItem>
               <NavLink
-                to="/home#sectionBenefits"
+                to="/home/benefits"
               >
                 Benefits
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                to="/about#sectionMembership"
+                to="/about/membership"
               >
                 Membership
               </NavLink>
@@ -205,21 +214,28 @@ function Footer() {
             </NavHeader>
             <NavItem>
               <NavLink
-                to="/about#sectionMission"
+                to="/about/mission"
               >
-                Mission &amp; Vision
+                Mission
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                to="/about#sectionCoreValues"
+                to="/about/vision"
+              >
+                Vision
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/about/core-values"
               >
                 Core Values
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                to="/about#sectionTribes"
+                to="/about/tribes"
               >
                 Tribes
               </NavLink>
@@ -250,6 +266,13 @@ function Footer() {
                 Blog
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                to="/login"
+              >
+                Login
+              </NavLink>
+            </NavItem>
           </NavColumn>
           <NavColumn>
             <NavHeader>
@@ -265,6 +288,13 @@ function Footer() {
             </NavItem>
             <NavItem>
               <NavAbsoluteLink
+                href="mailto:wdg@whitecloak.com"
+              >
+                Email
+              </NavAbsoluteLink>
+            </NavItem>
+            <NavItem>
+              <NavAbsoluteLink
                 href="https://www.whitecloak.com"
                 target="_blank"
               >
@@ -273,9 +303,10 @@ function Footer() {
             </NavItem>
             <NavItem>
               <NavAbsoluteLink
-                href="mailto:wdg@whitecloak.com"
+                href="mailto:inquiries@whitecloak.com"
+                target="_blank"
               >
-                Email
+                Company Email
               </NavAbsoluteLink>
             </NavItem>
           </NavColumn>

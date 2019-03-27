@@ -4,18 +4,31 @@ import View from '../../../../components/ui/View/View'
 
 import LandingSection from '../LandingSection/LandingSection'
 import BenefitsSection from '../BenefitsSection/BenefitsSection'
+import CtaSection from '../CtaSection/CtaSection'
+
+const resolve = (match, url) => {
+  return [
+    match.url,
+    url,
+  ]
+    .filter(s => s.length > 0)
+    .join('/')
+}
 
 function MainView(props) {
+  const { match, } = props
+
   return (
     <View
       {...props}
     >
       <LandingSection
-        id="sectionLanding"
+        id={resolve(match, '')}
       />
       <BenefitsSection
-        id="sectionBenefits"
+        id={resolve(match, 'benefits')}
       />
+      <CtaSection />
     </View>
   )
 }

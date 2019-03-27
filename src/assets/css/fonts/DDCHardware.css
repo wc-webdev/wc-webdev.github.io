@@ -1,16 +1,19 @@
 @font-face {
   font-family: 'DDCHardware';
   src: url('../../fonts/DDCHardware/DDCHardware-Regular.otf');
+  font-weight: bold;
 }
 
 @font-face {
   font-family: 'DDCHardware';
   src: url('../../fonts/DDCHardware/DDCHardware-Compressed.otf');
   font-stretch: extra-condensed;
+  font-weight: bold;
 }
 
 @font-face {
   font-family: 'DDCHardware';
   src: url('../../fonts/DDCHardware/DDCHardware-Condensed.otf');
   font-stretch: condensed;
+  font-weight: bold;
 }

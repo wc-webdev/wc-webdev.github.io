@@ -92,6 +92,7 @@ const SectionContent = styled.div`
 
 const SectionSubtitle = styled.h3`
   font-size: 2rem;
+  font-stretch: condensed;
   ${media.greaterThan('medium')`
     font-size: 3rem;
   `}
