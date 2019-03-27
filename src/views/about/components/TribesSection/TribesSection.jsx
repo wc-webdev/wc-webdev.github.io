@@ -82,14 +82,14 @@ const SectionContent = styled.div`
 const SectionDivisionBackground = styled.div`
   position: absolute;
   top: 0;
-  right: -22.5rem;
+  right: -23rem;
   align-items: center;
   height: 100%;
   display: none;
   
   ${SectionDivision}:nth-child(2n) > & {
     right: auto;
-    left: -22.5rem;
+    left: -23rem;
   }
   
   ${media.greaterThan('medium')`
