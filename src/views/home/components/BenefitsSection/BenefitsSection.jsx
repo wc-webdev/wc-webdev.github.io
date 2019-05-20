@@ -60,6 +60,9 @@ const SectionSubtitle = styled.h3`
   `}
 `
 
+const SectionSubtitleText = styled.span`
+`
+
 const SectionDescription = styled.p`
   ${media.greaterThan('medium')`
     font-size: 1.5rem;
@@ -91,7 +94,13 @@ function BenefitsSection(props) {
           <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
-                Focused conducive learning.
+                <SectionSubtitleText>
+                  Focused
+                </SectionSubtitleText> <SectionSubtitleText>
+                  conducive
+                </SectionSubtitleText> <SectionSubtitleText>
+                  learning.
+                </SectionSubtitleText>
               </SectionSubtitle>
               <SectionDescription>
                 Engage in a mentor-mentee approach
@@ -108,7 +117,9 @@ function BenefitsSection(props) {
           <SectionContentWrapperAlt>
             <SectionContent>
               <SectionSubtitle>
-                Enticing sponsored events.
+                <SectionSubtitleText>
+                  <SectionSubtitleText>Enticing</SectionSubtitleText> <SectionSubtitleText>sponsored</SectionSubtitleText> <SectionSubtitleText>events.</SectionSubtitleText>
+                </SectionSubtitleText>
               </SectionSubtitle>
               <SectionDescription>
                 Keep up-to-date in latest Web trends
@@ -125,7 +136,9 @@ function BenefitsSection(props) {
           <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
-                Friendly approachable peers.
+                <SectionSubtitleText>
+                  <SectionSubtitleText>Friendly</SectionSubtitleText> <SectionSubtitleText>approachable</SectionSubtitleText> <SectionSubtitleText>peers.</SectionSubtitleText>
+                </SectionSubtitleText>
               </SectionSubtitle>
               <SectionDescription>
                 Build and strengthen connections
@@ -142,7 +155,9 @@ function BenefitsSection(props) {
           <SectionContentWrapperAlt>
             <SectionContent>
               <SectionSubtitle>
-                Rewarding fruitful membership.
+                <SectionSubtitleText>
+                  <SectionSubtitleText>Rewarding</SectionSubtitleText> <SectionSubtitleText>fruitful</SectionSubtitleText> <SectionSubtitleText>membership.</SectionSubtitleText>
+                </SectionSubtitleText>
               </SectionSubtitle>
               <SectionDescription>
                 Earn points for purchasing exclusive items

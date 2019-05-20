@@ -5,6 +5,7 @@ import LinkButton from '../../../../components/ui/LinkButton/LinkButton';
 
 const Section = styled.section`
   position: relative;
+  margin-bottom: 4rem;
 `
 
 const Background = styled.div`
@@ -56,7 +57,7 @@ const CtaStatement = styled.strong`
   display: block;
   font-size: 1.75rem;
   margin-bottom: 2rem;
-  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-normal-base);
   line-height: 1;
 `
 
@@ -69,7 +70,7 @@ function CtaSection(props) {
       <Foreground>
         <Content>
           <CtaStatement>
-            Get involved. Become the best.
+            Get&nbsp;involved. Become&nbsp;the&nbsp;best.
           </CtaStatement>
           <Cta
             to="mailto:wdg@whitecloak.com?subject=[Application]"

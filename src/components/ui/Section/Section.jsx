@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
 import generateTexture from '../../../services/generateTexture'
 
 const EVEN_TEXTURE_PARAMS = {
@@ -45,6 +46,9 @@ const ODD_TEXTURE_PARAMS = {
 const Base = styled.section`
   min-height: 100vh;
   position: relative;
+  &:first-child {
+    margin-bottom: 4.4vw;
+  }
 `
 
 const Background = styled.div`
@@ -54,17 +58,24 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   transform: skewY(5deg);
+  overflow: hidden;
   &::after {
     content: ' ';
     background-image: url('${generateTexture(ODD_TEXTURE_PARAMS)}');
     position: absolute;
-    top: 0;
+    top: -4.4vw;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 8.8vw);
     display: block;
     opacity: 0.15;
     transform: skewY(-5deg);
+  }
+  ${Base}:first-child > & {
+    height: calc(100% + 4.4vw);
+  }
+  ${Base}:first-child > &::after {
+    top: 0;
   }
   ${Base}:nth-child(2n) > & {
     background-color: var(--color-fg);

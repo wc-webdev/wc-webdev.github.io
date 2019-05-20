@@ -5,9 +5,32 @@ import media from 'styled-media-query'
 import WordmarkLogo from '../../../../components/brand/WordmarkLogo/WordmarkLogo'
 import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
 
+import generateTexture from '../../../../services/generateTexture'
+
+const ODD_TEXTURE_PARAMS = {
+  items: [
+    [0, "clouds", { "rgba": [192, 192, 192, 255], "roughness": 5 }],
+    [0, "contrast", { "adjust": 255 }],
+    [0, "threshold"],
+    [0, "invert"],
+    [0, "dots", {
+      "gridX": 24,
+      "gridY": 24,
+      "size": 64,
+      "rgba": [255, 255, 255, 255],
+      "shape": "circle",
+      "xsines": 0.5,
+      "ysines": 0.5,
+      "dynamic": true
+    }],
+    [0, "to_alpha", {"rgba": [0, 0, 0, 255], }],
+  ]
+}
+
 const Section = styled.section`
   height: 100vh;
   position: relative;
+  margin-bottom: 4.4vw;
 `
 
 const Background = styled.div`
@@ -16,8 +39,16 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 150%;
-  ${Section}:nth-child(2n) > & {
-    background-color: var(--color-fg);
+  &::after {
+    content: ' ';
+    background-image: url('${generateTexture(ODD_TEXTURE_PARAMS)}');
+    position: absolute;
+    top: -4.4vw;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 8.8vw);
+    display: block;
+    opacity: 0.15;
   }
 `
 
