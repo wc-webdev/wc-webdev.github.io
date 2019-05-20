@@ -3,31 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import Logo from '../../../../components/brand/Logo/Logo'
-
-const Section = styled.section`
-  position: relative;
-  height: 100vh;
-`
-
-const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  ${Section}:nth-child(2n) > & {
-    background-color: var(--color-fg);
-  }
-`
-
-const Foreground = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  ${Section}:nth-child(2n) > & {
-    color: var(--color-bg);
-  }
-`
+import Section from '../../../../components/ui/Section/Section'
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -76,22 +52,22 @@ function MarketingSection(props) {
   return (
     <Section
       {...props}
+      style={{
+        height: '100vh',
+      }}
     >
-      <Background />
-      <Foreground>
-        <ContentWrapper>
-          <Content>
-            <LogoWrapper>
-              <Logo />
-            </LogoWrapper>
-            <Text>
-              With an ever-increasing number of members, the Order of the White Lotus is a democratic
-              guild committed to excellence and career growth of its Members and the Company through exercising its tenets and
-              values.
-            </Text>
-          </Content>
-        </ContentWrapper>
-      </Foreground>
+      <ContentWrapper>
+        <Content>
+          <LogoWrapper>
+            <Logo />
+          </LogoWrapper>
+          <Text>
+            With an ever-increasing number of members, the Order of the White Lotus is a democratic
+            guild committed to excellence and career growth of its Members and the Company through exercising its tenets and
+            values.
+          </Text>
+        </Content>
+      </ContentWrapper>
     </Section>
   )
 }

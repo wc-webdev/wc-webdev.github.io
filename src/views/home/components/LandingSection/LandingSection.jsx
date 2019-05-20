@@ -12,10 +12,10 @@ const Section = styled.section`
 
 const Background = styled.div`
   position: fixed;
-  top: 0;
+  top: ${props => props.scrollY / props.scrollHeight * -399}px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 150%;
   ${Section}:nth-child(2n) > & {
     background-color: var(--color-fg);
   }
@@ -188,29 +188,40 @@ const CtaContainer = styled.div`
 
 class LandingSection extends React.Component {
   state = {
-    id: 'f'
+    id: `a${Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)}`,
+    scrollY: 0,
   }
 
   componentDidMount() {
+    const { id, } = this.state
     this.effect = window.VANTA.NET({
-      el: `#${this.state.id}`,
+      el: `#${id}`,
       color: '#734369',
       backgroundColor: '#272739',
     })
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
     this.effect.destroy()
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    this.setState({ scrollY: window.scrollY, })
   }
 
   render() {
-    const { id, } = this.state
+    const { id, scrollY, } = this.state
+    const { scrollHeight, } = window.document.documentElement
     return (
       <Section
         {...this.props}
       >
         <Background
           id={id}
+          scrollY={scrollY}
+          scrollHeight={scrollHeight}
         />
         <Foreground>
           <HeadingsWrapper>

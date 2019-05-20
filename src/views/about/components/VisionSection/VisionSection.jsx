@@ -2,31 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-
-const Section = styled.section`
-  position: relative;
-  height: 100vh;
-`
-
-const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  ${Section}:nth-child(2n) > & {
-    background-color: var(--color-fg);
-  }
-`
-
-const Foreground = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  ${Section}:nth-child(2n) > & {
-    color: var(--color-bg);
-  }
-`
+import Section from '../../../../components/ui/Section/Section'
 
 const ContentWrapper = styled.div`
   max-width: 60rem;
@@ -88,19 +64,19 @@ function VisionSection(props) {
   return (
     <Section
       {...props}
+      style={{
+        height: '100vh',
+      }}
     >
-      <Background />
-      <Foreground>
-        <ContentWrapper>
-          <Title>
-            Vision
-          </Title>
-          <Content>
-            The Guild orients itself to becoming a thriving community of passion-driven individuals, pushing the Web
-            development towards the strong tradition of progressive and innovative nature of the Web platform.
-          </Content>
-        </ContentWrapper>
-      </Foreground>
+      <ContentWrapper>
+        <Title>
+          Vision
+        </Title>
+        <Content>
+          The Guild orients itself to becoming a thriving community of passion-driven individuals, pushing the Web
+          development towards the strong tradition of progressive and innovative nature of the Web platform.
+        </Content>
+      </ContentWrapper>
     </Section>
   )
 }

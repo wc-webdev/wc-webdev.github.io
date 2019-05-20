@@ -22,6 +22,7 @@ const Foreground = styled.div`
   width: 100%;
   min-height: 100%;
   position: relative;
+  padding-top: 2rem;
   ${Section}:nth-child(2n) > & {
     color: var(--color-bg);
   }

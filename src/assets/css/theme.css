@@ -1,8 +1,8 @@
 :root {
   --size: 16px;
 
-  --color-bg: #272739;
-  --color-fg: #FFFCE4;
+  --color-bg: rgb(39, 39, 57);
+  --color-fg: rgb(255, 252, 228);
   --color-accent-air: #49C1C1;
   --color-accent-metal: #E3B023;
   --color-accent-earth: #54AA3F;
