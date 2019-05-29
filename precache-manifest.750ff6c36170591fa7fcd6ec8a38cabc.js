@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4700bcb5e15679f9d214",
-    "url": "/static/css/main.5d311170.chunk.css"
+    "revision": "16263ab258cea2f72a49",
+    "url": "/static/css/main.964e68e9.chunk.css"
   },
   {
-    "revision": "4700bcb5e15679f9d214",
-    "url": "/static/js/main.f09739ca.chunk.js"
+    "revision": "16263ab258cea2f72a49",
+    "url": "/static/js/main.2fdf46a0.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.c5541365.js"
   },
   {
-    "revision": "488f8f0930970f6dffba",
+    "revision": "08dd6afe09de834a1d6b",
     "url": "/static/css/2.b0f61953.chunk.css"
   },
   {
-    "revision": "488f8f0930970f6dffba",
-    "url": "/static/js/2.dca31819.chunk.js"
+    "revision": "08dd6afe09de834a1d6b",
+    "url": "/static/js/2.b81812df.chunk.js"
   },
   {
     "revision": "363148e777d51407203f053532de4a4a",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/DDCHardware-Compressed.08caed58.otf"
   },
   {
-    "revision": "4393b235177ce011bdc7cab5b70ee1e1",
+    "revision": "87491aed7ae06c0b44a36f9561705ddf",
     "url": "/index.html"
   }
 ];
