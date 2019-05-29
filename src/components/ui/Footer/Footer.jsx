@@ -15,7 +15,6 @@ const Base = styled.footer`
   color: var(--color-fg);
   padding: 2rem 0;
   position: relative;
-  margin-top: -4.4vw;
 `
 
 const Container = styled.div`

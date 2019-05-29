@@ -73,11 +73,11 @@ function CtaSection(props) {
             Get&nbsp;involved. Become&nbsp;the&nbsp;best.
           </CtaStatement>
           <Cta
-            to="mailto:wdg@whitecloak.com?subject=[Application]"
+            to="https://forms.gle/LN1rGzXAkHjNt8Xb8"
             variant="primary"
             absolute
           >
-            Join Now
+            Enlist Now
           </Cta>
           <Cta
             to="/about"

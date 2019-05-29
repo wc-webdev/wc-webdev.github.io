@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { throttle, } from 'lodash'
 
 import WordmarkLogo from '../../../../components/brand/WordmarkLogo/WordmarkLogo'
 import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
@@ -223,6 +224,8 @@ class LandingSection extends React.Component {
     scrollY: 0,
   }
 
+  timeoutHandle = null
+
   componentDidMount() {
     const { id, } = this.state
     this.effect = window.VANTA.NET({
@@ -238,9 +241,9 @@ class LandingSection extends React.Component {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll = () => {
+  handleScroll = throttle(() => {
     this.setState({ scrollY: window.scrollY, })
-  }
+  }, 1, { trailing: true, leading: true, })
 
   render() {
     const { id, scrollY, } = this.state
@@ -280,11 +283,11 @@ class LandingSection extends React.Component {
             </Slogan>
             <CtaContainer>
               <Cta
-                to="mailto:wdg@whitecloak.com?subject=[Application]"
+                to="https://forms.gle/LN1rGzXAkHjNt8Xb8"
                 variant="primary"
                 absolute
               >
-                Join Now
+                Enlist Now
               </Cta>
               <Cta
                 to="/about"

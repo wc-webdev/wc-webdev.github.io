@@ -81,7 +81,9 @@ function LinkButton(props) {
     <StyledLink
       {...theProps}
       as={absolute ? 'a' : Link}
-      to={to}
+      to={absolute ? null : to}
+      href={absolute ? to : null}
+      target={absolute ? '_blank' : null}
       variant={variant}
     >
       {children}

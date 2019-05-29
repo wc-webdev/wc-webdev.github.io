@@ -83,7 +83,7 @@ function CoreValuesSection(props) {
               Eloquence
             </CoreValueTitle>
             <CoreValueDescription>
-              A Guild Member is encouraged to speak up their perspectives fluently and clearly during discourse. One may find themselves in an argumentative position, and is are expected to make a resolution accounting all of the insights of the Guild.
+              A Guild Member is encouraged to speak up their perspectives fluently and clearly during discourse. One may find themselves in an argumentative position, and are expected to make a resolution accounting all of the relevant insights of the Guild.
             </CoreValueDescription>
           </CoreValueCell>
           <CoreValueCell>
@@ -99,7 +99,7 @@ function CoreValuesSection(props) {
               Introspection
             </CoreValueTitle>
             <CoreValueDescription>
-              The Guild emphasizes introspection—the examination or observation of one’s own mental or emotional processes. Taking a step back to consider one might be mistaken allows for better ideas to be considered.
+              The Guild emphasizes introspection—the examination or observation of one’s own mental or emotional processes. Taking a step back to be conscious of differences allows ideas to be considered, improved, and reconciled.
             </CoreValueDescription>
           </CoreValueCell>
           <CoreValueCell>

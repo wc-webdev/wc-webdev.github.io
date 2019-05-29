@@ -47,7 +47,6 @@ const SectionDivision = styled.div`
 `
 
 const SectionContent = styled.div`
-  min-height: 100vh;
   position: relative;
   align-items: center;
   ${SectionDivision}:nth-child(2n) > ${SectionDivisionForeground} > & {
@@ -56,6 +55,7 @@ const SectionContent = styled.div`
   
   ${media.greaterThan('medium')`
     width: 60%;
+    min-height: 100vh;
     display: flex;
     ${SectionDivision}:nth-child(2n) > ${SectionDivisionForeground} > & {
       width: 50%;
@@ -182,12 +182,14 @@ function TribesSection(props) {
                       Water
                     </SubsectionTitle>
                     <p>
-                      Water flows through rivers, from the small streams to the mighty oceans blah blah blah blah, fire is the
-                      cousin of water blah blah blah
+                      Water rushes through rivers, from the small streams to the mighty oceans.
+                      As the cousin of Fire, the apps that are crafted in this tribe are reactive, however
+                      Water can turn anything into many forms, and it too, exhibits not just a single appearance.
+                      Technologies such as Electron, Ionic, React Native, and Vue Native are the tools of the Water Guild.
                     </p>
                     <p>
-                      Expected to have knowledge on web-based cross platform technology
-                      Electron, Ionic, Cordova, React Native, Vue Native
+                      Members of this tribe are expected to have a knowledge in cross-platform development using Web
+                      technologies.
                     </p>
                   </Subsection>
                   <Subsection>
@@ -200,11 +202,11 @@ function TribesSection(props) {
                       Air
                     </SubsectionTitle>
                     <p>
-                      The air we breathe is everywhere blah blah blah
+                      The air we breathe is everywhere. The technologies of Web protocols, HTML, and CSS blows over the
+                      land, breathing life to the platform of collaboration and communication.
                     </p>
                     <p>
-                      Members of this tribe are knowledgeable with the fundamentals of Web development.
-                      HTML, CSS, HTTP concepts
+                      Members of this tribe are knowledgeable with the fundamentals of Web design.
                     </p>
                   </Subsection>
                 </div>
@@ -230,11 +232,13 @@ function TribesSection(props) {
                       Earth
                     </SubsectionTitle>
                     <p>
-                      As stable as the ground where the tallest mountains stand on blah blah blah
+                      As stable as the ground where the tallest mountains stand on, the dwellers of this tribe live
+                      simply, for they work on the methods that proved effective since the inception of the platform:
+                      server-side rendering. Technologies that are relevant to this tribe include Laravel, WordPress,
+                      Drupal, and Express to name a few.
                     </p>
                     <p>
-                      Expected to have knowledge on serverside technologies
-                      Laravel, WordPress, Drupal, Express
+                      Members of this tribe know how to work on server-side rendering of Web content.
                     </p>
                   </Subsection>
                   <Subsection>
@@ -247,11 +251,14 @@ function TribesSection(props) {
                       Metal
                     </SubsectionTitle>
                     <p>
-                      The greatest swords are forged from finest metals blah blah blah
+                      The greatest weapons are forged from finest metals. Many a warrior would have his trusty sword
+                      to prepare himself for battle. Through Metal, all the complex things can be created as evidence of
+                      simpler existence of tools like machines and scaffolds. For the Web platform, projects are
+                      built on top of Webpack, Rollup, and Yeoman as examples.
                     </p>
                     <p>
-                      Members of this subdiscipline composes of elite forces of project setup and web development best practices.
-                      Webpack, Yeoman, Plop, Grunt, Gulp, Rollup
+                      Members of this sub-discipline are composed of elite forces of project setup and ensuring of
+                      development best practices.
                     </p>
                   </Subsection>
                   <Subsection>
@@ -264,11 +271,13 @@ function TribesSection(props) {
                       Fire
                     </SubsectionTitle>
                     <p>
-                      Watch how the tongues of fire turn everything into ash; put them in torches and they light up the way
+                      Watch how the tongues of fire turn everything into ash; put them in torches and they light up the
+                      way. Like Epimetheus giving fire to the humans that opened them to many possibilities, it is the
+                      tribe of Fire that opened the platform to apps that have never imagined before, from technologies
+                      such as React, Vue, Angular, and Polymer.
                     </p>
                     <p>
-                      Members of this tribe are knowledgeable with development of single-page apps (SPAs).
-                      React, Vue, Angular
+                      Members of this tribe are well-versed with development of single-page apps (SPAs).
                     </p>
                   </Subsection>
                 </div>

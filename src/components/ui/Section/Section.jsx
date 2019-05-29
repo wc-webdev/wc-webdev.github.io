@@ -44,10 +44,13 @@ const ODD_TEXTURE_PARAMS = {
 }
 
 const Base = styled.section`
-  min-height: 100vh;
+  min-height: calc(100vh + 8.8vw);
   position: relative;
   &:first-child {
-    margin-bottom: 4.4vw;
+    min-height: calc(100vh + 4.4vw);
+  }
+  &:last-child {
+    min-height: calc(100vh + 4.4vw);
   }
 `
 
@@ -72,13 +75,18 @@ const Background = styled.div`
     transform: skewY(-5deg);
   }
   ${Base}:first-child > & {
-    height: calc(100% + 4.4vw);
+    height: calc(100% + 8.8vw);
+    top: -4.4vw;
   }
   ${Base}:first-child > &::after {
     top: 0;
   }
+  ${Base}:last-child > & {
+    height: calc(100% + 8.8vw);
+  }
   ${Base}:nth-child(2n) > & {
     background-color: var(--color-fg);
+    color: var(--color-bg);
     &::after {
       background-image: url('${generateTexture(EVEN_TEXTURE_PARAMS)}');
       opacity: 0.045;
@@ -97,6 +105,14 @@ const Foreground = styled.div`
   }
 `
 
+const BackgroundContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  transform: skewY(-5deg);
+`
+
 function Section(props) {
   const { children, background, ...etcProps } = props
   return (
@@ -104,7 +120,9 @@ function Section(props) {
       {...etcProps}
     >
       <Background>
-        {background}
+        <BackgroundContainer>
+          {background}
+        </BackgroundContainer>
       </Background>
       <Foreground>
         {children}

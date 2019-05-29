@@ -24,6 +24,9 @@ const Title = styled.h2`
   font-size: 2.5rem;
   margin: 0;
   font-stretch: condensed;
+  ${media.greaterThan('small')`
+    font-size: 3.5rem;
+  `}
   ${media.greaterThan('medium')`
     font-size: 5rem;
     display: flex;

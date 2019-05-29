@@ -31,17 +31,14 @@ const SectionTitleDummy = styled.div`
 `
 
 const SectionContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
   ${media.greaterThan('medium')`
-    display: flex;
-    align-items: center;
-  `}
-`
-
-const SectionContentWrapperAlt = styled.div`
-  ${media.greaterThan('medium')`
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    ${Content}:nth-child(2n) & {
+      flex-direction: row-reverse;
+    }
   `}
 `
 
@@ -49,6 +46,13 @@ const SectionContent = styled.div`
   ${media.greaterThan('medium')`
     width: 40%;
   `}
+`
+
+const SectionGraphics = styled.div`
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const SectionSubtitle = styled.h3`
@@ -107,6 +111,12 @@ function BenefitsSection(props) {
                 on learning and sharing useful knowledge.
               </SectionDescription>
             </SectionContent>
+            <SectionGraphics>
+              <img
+                src="/img/benefits1.svg"
+                alt="Focused conducive learning"
+              />
+            </SectionGraphics>
           </SectionContentWrapper>
         </ContentForeground>
       </Content>
@@ -114,7 +124,7 @@ function BenefitsSection(props) {
         <ContentBackground />
         <ContentForeground>
           <SectionTitleDummy/>
-          <SectionContentWrapperAlt>
+          <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
                 <SectionSubtitleText>
@@ -126,7 +136,13 @@ function BenefitsSection(props) {
                 from events endorsed by the Guild.
               </SectionDescription>
             </SectionContent>
-          </SectionContentWrapperAlt>
+            <SectionGraphics>
+              <img
+                src="/img/benefits2.svg"
+                alt="Enticing sponsored events"
+              />
+            </SectionGraphics>
+          </SectionContentWrapper>
         </ContentForeground>
       </Content>
       <Content>
@@ -145,6 +161,12 @@ function BenefitsSection(props) {
                 with people from various projects.
               </SectionDescription>
             </SectionContent>
+            <SectionGraphics>
+              <img
+                src="/img/benefits3.svg"
+                alt="Friendly approachable peers"
+              />
+            </SectionGraphics>
           </SectionContentWrapper>
         </ContentForeground>
       </Content>
@@ -152,7 +174,7 @@ function BenefitsSection(props) {
         <ContentBackground />
         <ContentForeground>
           <SectionTitleDummy/>
-          <SectionContentWrapperAlt>
+          <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
                 <SectionSubtitleText>
@@ -164,7 +186,13 @@ function BenefitsSection(props) {
                 from being an outstanding member of the Guild.
               </SectionDescription>
             </SectionContent>
-          </SectionContentWrapperAlt>
+            <SectionGraphics>
+              <img
+                src="/img/benefits4.svg"
+                alt="Rewarding fruitful membership"
+              />
+            </SectionGraphics>
+          </SectionContentWrapper>
         </ContentForeground>
       </Content>
     </Section>
