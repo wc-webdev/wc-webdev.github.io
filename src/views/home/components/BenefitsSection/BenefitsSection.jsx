@@ -42,9 +42,21 @@ const SectionContentWrapper = styled.div`
   `}
 `
 
+const SectionImage = styled.img`
+  display: block;
+  width: 100%;
+`
+
 const SectionContent = styled.div`
+  flex-shrink: 0;
+  flex-grow: 1;
   ${media.greaterThan('medium')`
     width: 40%;
+    margin-right: 4rem;
+    ${Content}:nth-child(2n) & {
+      margin-right: 0;
+      margin-left: 4rem;
+    }
   `}
 `
 
@@ -112,7 +124,7 @@ function BenefitsSection(props) {
               </SectionDescription>
             </SectionContent>
             <SectionGraphics>
-              <img
+              <SectionImage
                 src="/img/benefits1.svg"
                 alt="Focused conducive learning"
               />
@@ -137,7 +149,7 @@ function BenefitsSection(props) {
               </SectionDescription>
             </SectionContent>
             <SectionGraphics>
-              <img
+              <SectionImage
                 src="/img/benefits2.svg"
                 alt="Enticing sponsored events"
               />
@@ -162,7 +174,7 @@ function BenefitsSection(props) {
               </SectionDescription>
             </SectionContent>
             <SectionGraphics>
-              <img
+              <SectionImage
                 src="/img/benefits3.svg"
                 alt="Friendly approachable peers"
               />
@@ -187,7 +199,7 @@ function BenefitsSection(props) {
               </SectionDescription>
             </SectionContent>
             <SectionGraphics>
-              <img
+              <SectionImage
                 src="/img/benefits4.svg"
                 alt="Rewarding fruitful membership"
               />
