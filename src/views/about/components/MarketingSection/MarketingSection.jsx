@@ -62,9 +62,10 @@ function MarketingSection(props) {
             <Logo />
           </LogoWrapper>
           <Text>
-            With an ever-increasing number of members, the Order of the White Lotus is a democratic
-            guild committed to excellence and career growth of its Members and the Company through exercising its tenets and
-            values.
+            The Order of the White Lotus is a democratic
+            guild committed to Web development excellence
+            of White Cloak, empowering the multitude of its Members
+            through ambitious and achievable undertakings.
           </Text>
         </Content>
       </ContentWrapper>

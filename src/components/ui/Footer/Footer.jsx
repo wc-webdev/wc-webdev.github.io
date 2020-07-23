@@ -236,9 +236,9 @@ function Footer() {
             </NavItem>
             <NavItem>
               <NavLink
-                to="/about/tribes"
+                to="/about/staff"
               >
-                Tribes
+                Staff
               </NavLink>
             </NavItem>
           </NavColumn>
@@ -300,14 +300,6 @@ function Footer() {
                 target="_blank"
               >
                 Company Website
-              </NavAbsoluteLink>
-            </NavItem>
-            <NavItem>
-              <NavAbsoluteLink
-                href="mailto:inquiries@whitecloak.com"
-                target="_blank"
-              >
-                Company Email
               </NavAbsoluteLink>
             </NavItem>
           </NavColumn>

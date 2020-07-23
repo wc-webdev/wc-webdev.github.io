@@ -3,10 +3,11 @@ import * as React from 'react'
 import View from '../../../../components/ui/View/View'
 
 import MarketingSection from '../MarketingSection/MarketingSection'
-import TribesSection from '../TribesSection/TribesSection'
 import MissionSection from '../MissionSection/MissionSection'
 import VisionSection from '../VisionSection/VisionSection'
 import CoreValuesSection from '../CoreValuesSection/CoreValuesSection'
+import CtaSection from '../CtaSection/CtaSection'
+import CommitteesSection from '../CommitteesSection/CommitteesSection';
 
 const resolve = (match, url) => {
   return [
@@ -32,12 +33,13 @@ function MainView(props) {
       <VisionSection
         id={resolve(match, 'vision')}
       />
-      <TribesSection
-        id={resolve(match, 'tribes')}
-      />
       <CoreValuesSection
         id={resolve(match, 'core-values')}
       />
+      <CommitteesSection
+        id={resolve(match, 'staff')}
+      />
+      <CtaSection />
     </View>
   )
 }

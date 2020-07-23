@@ -1,32 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { throttle, } from 'lodash'
 
 import WordmarkLogo from '../../../../components/brand/WordmarkLogo/WordmarkLogo'
 import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
-
-import generateTexture from '../../../../services/generateTexture'
-
-const ODD_TEXTURE_PARAMS = {
-  items: [
-    [0, "clouds", { "rgba": [192, 192, 192, 255], "roughness": 5 }],
-    [0, "contrast", { "adjust": 255 }],
-    [0, "threshold"],
-    [0, "invert"],
-    [0, "dots", {
-      "gridX": 24,
-      "gridY": 24,
-      "size": 64,
-      "rgba": [255, 255, 255, 255],
-      "shape": "circle",
-      "xsines": 0.5,
-      "ysines": 0.5,
-      "dynamic": true
-    }],
-    [0, "to_alpha", {"rgba": [0, 0, 0, 255], }],
-  ]
-}
 
 const Section = styled.section`
   height: 100vh;
@@ -42,14 +19,12 @@ const Background = styled.div`
   height: 150%;
   &::after {
     content: ' ';
-    background-image: url('${generateTexture(ODD_TEXTURE_PARAMS)}');
     position: absolute;
     top: -4.4vw;
     left: 0;
     width: 100%;
     height: calc(100% + 8.8vw);
     display: block;
-    opacity: 0.15;
   }
 `
 
@@ -224,26 +199,24 @@ class LandingSection extends React.Component {
     scrollY: 0,
   }
 
-  timeoutHandle = null
-
   componentDidMount() {
-    const { id, } = this.state
-    this.effect = window.VANTA.NET({
-      el: `#${id}`,
-      color: '#734369',
-      backgroundColor: '#272739',
-    })
-    window.addEventListener('scroll', this.handleScroll)
+    //const { id, } = this.state
+    //this.effect = window.VANTA.NET({
+    //  el: `#${id}`,
+    //  color: '#734369',
+    //  backgroundColor: '#272739',
+    //})
+    //window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
-    this.effect.destroy()
-    window.removeEventListener('scroll', this.handleScroll)
+    //this.effect.destroy()
+    //window.removeEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll = throttle(() => {
-    this.setState({ scrollY: window.scrollY, })
-  }, 1, { trailing: true, leading: true, })
+  //handleScroll = throttle(() => {
+  //  this.setState({ scrollY: window.scrollY, })
+  //}, 1, { trailing: true, leading: true, })
 
   render() {
     const { id, scrollY, } = this.state

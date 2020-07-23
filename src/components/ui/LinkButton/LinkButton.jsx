@@ -31,40 +31,39 @@ const StyledLink = styled.a`
   animation-timing-function: linear;
   background-size: 800% auto;
   user-select: none;
+  line-height: 1;
+  vertical-align: top;
+  box-sizing: border-box;
   
   ${props => {
     let bgColor
     let borderColor
     let fgColor
-    let borderWidth
   
     switch (props.variant) {
       case 'primary':
         bgColor = 'var(--color-fg)'
         borderColor = 'var(--color-fg)'
         fgColor = 'var(--color-bg)'
-        borderWidth = '0'
         break
       default:
         bgColor = 'transparent'
         borderColor = 'var(--color-fg)'
         fgColor = 'var(--color-fg)'
-        borderWidth = '0.125rem'
         break
     }
   
     return css`
       background-color: ${bgColor};
       border-color: ${borderColor};
-      color: ${fgColor};
-      border-width: ${borderWidth};
+      color: ${fgColor}; 
     `
   }}
   
   &:active {
     color: #fff;
     background-image: linear-gradient(to right, #C4984C, #CF633B, #B83E6C, #983BCF, #5961C4, #983BCF, #B83E6C, #CF633B, #C4984C);
-    border: 0;
+    border-color: transparent;
   }
 `
 

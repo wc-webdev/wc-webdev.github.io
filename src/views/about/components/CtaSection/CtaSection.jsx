@@ -1,11 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LinkButton from '../../../../components/ui/LinkButton/LinkButton';
+import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
 
 const Section = styled.section`
   position: relative;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  :nth-child(2n) {
+    --color-bg: var(--color-positive);
+    --color-fg: var(--color-negative);
+  }
 `
 
 const Background = styled.div`
@@ -14,9 +18,7 @@ const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  ${Section}:nth-child(2n) > & {
-    background-color: var(--color-fg);
-  }
+  background-color: var(--color-bg);
 `
 
 const Foreground = styled.div`
@@ -24,9 +26,7 @@ const Foreground = styled.div`
   min-height: 100%;
   position: relative;
   padding-top: 6rem;
-  ${Section}:nth-child(2n) > & {
-    color: var(--color-bg);
-  }
+  color: var(--color-fg);
 `
 
 const Content = styled.div`
@@ -53,16 +53,16 @@ const Cta = styled(LinkButton)`
   `}
 `
 
+const CtaStatementLine = styled.span`
+  white-space: nowrap;
+`
+
 const CtaStatement = styled.strong`
   display: block;
   font-size: 1.75rem;
   margin-bottom: 2rem;
   font-weight: var(--font-weight-normal-base);
   line-height: 1;
-`
-
-const CtaStatementLine = styled.span`
-  white-space: nowrap;
 `
 
 function CtaSection(props) {
@@ -88,11 +88,6 @@ function CtaSection(props) {
             absolute
           >
             Enlist Now
-          </Cta>
-          <Cta
-            to="/about"
-          >
-            Learn More
           </Cta>
         </Content>
       </Foreground>

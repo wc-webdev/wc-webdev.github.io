@@ -12,6 +12,7 @@ const Content = styled.div`
   position: relative;
   ${media.greaterThan('medium')`
     padding: 0 2rem;
+    min-height: 0;
   `}
 `
 
@@ -21,13 +22,6 @@ const SectionTitle = styled.h2`
   ${media.greaterThan('medium')`
     font-size: 2rem;
   `}
-`
-
-const SectionTitleDummy = styled.div`
-  height: 6rem;
-  padding-top: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 `
 
 const SectionContentWrapper = styled.div`
@@ -135,7 +129,6 @@ function BenefitsSection(props) {
       <Content>
         <ContentBackground />
         <ContentForeground>
-          <SectionTitleDummy/>
           <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
@@ -160,7 +153,6 @@ function BenefitsSection(props) {
       <Content>
         <ContentBackground/>
         <ContentForeground>
-          <SectionTitleDummy/>
           <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>
@@ -185,7 +177,6 @@ function BenefitsSection(props) {
       <Content>
         <ContentBackground />
         <ContentForeground>
-          <SectionTitleDummy/>
           <SectionContentWrapper>
             <SectionContent>
               <SectionSubtitle>

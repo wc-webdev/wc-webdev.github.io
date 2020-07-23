@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import Section from '../../../../components/ui/Section/Section'
+import LinkButton from '../../../../components/ui/LinkButton/LinkButton'
 
 const Content = styled.div`
   max-width: 60rem;
@@ -39,10 +40,11 @@ const CoreValuesWrapper = styled.div`
 `
 
 const CoreValueCell = styled.div`
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
   ${media.greaterThan('medium')`
     width: 50%;
     padding: 0 2rem;
+    margin: 2rem 0;
   `}
 `
 
@@ -65,50 +67,95 @@ const SectionTitle = styled.h2`
 `
 
 const CoreValueDescription = styled.p`
-  margin: 0;
+  margin: 0 0 1rem 0;
 `
 
-function CoreValuesSection(props) {
+const CoreValueCtaWrapper = styled.div`
+
+`
+
+const Cta = styled(LinkButton)`
+  display: flex;
+  ${media.greaterThan('small')`
+    display: inline-flex;
+    width: 12rem;
+  `}
+`
+
+
+function CommitteesSection(props) {
   return (
     <Section
       {...props}
     >
       <Content>
         <SectionTitle>
-          Core Values
+          Staff
         </SectionTitle>
         <CoreValuesWrapper>
           <CoreValueCell>
             <CoreValueTitle>
-              Eloquence
+              Core Committee
             </CoreValueTitle>
             <CoreValueDescription>
-              A Guild Member is encouraged to speak up their perspectives fluently and clearly during discourse. One may find themselves in an argumentative position, and are expected to make a resolution accounting all of the relevant insights of the Guild.
+              Stewards of the Guild. The Core Committee plans and carries out actions which brings value to the Guild's
+              Members, and oversees the rest of the Committees to ensure coordination within the Guild's staff.
             </CoreValueDescription>
+            <CoreValueCtaWrapper>
+              <Cta
+                to="/about"
+              >
+                Learn More
+              </Cta>
+            </CoreValueCtaWrapper>
           </CoreValueCell>
           <CoreValueCell>
             <CoreValueTitle>
-              Proactiveness
+              Technical Committee
             </CoreValueTitle>
             <CoreValueDescription>
-              A Guild Member, besides having autonomy through taking up responsibility are also expected to act on their own decisions while being mindful of effects from interpersonal contexts, to the Company and its place in the industry.
+              Responsible for recommendations on the Company's best practices. The Technical Committee is essential to
+              keep the company up-to-date with the latest trends and paradigms of the industry.
             </CoreValueDescription>
+            <CoreValueCtaWrapper>
+              <Cta
+                to="/about"
+              >
+                Apply
+              </Cta>
+            </CoreValueCtaWrapper>
           </CoreValueCell>
           <CoreValueCell>
             <CoreValueTitle>
-              Introspection
+              Training Committee
             </CoreValueTitle>
             <CoreValueDescription>
-              The Guild emphasizes introspection—the examination or observation of one’s own mental or emotional processes. Taking a step back to be conscious of differences allows ideas to be considered, improved, and reconciled.
+              In charge of formulating, preparing, and promulgating learning materials for trainees' and new hires'
+              consumption. The Training Committee keeps the caliber of the Company's at a competitive baseline.
             </CoreValueDescription>
+            <CoreValueCtaWrapper>
+              <Cta
+                to="/about"
+              >
+                Apply
+              </Cta>
+            </CoreValueCtaWrapper>
           </CoreValueCell>
           <CoreValueCell>
             <CoreValueTitle>
-              Curiosity
+              Interview Committee
             </CoreValueTitle>
             <CoreValueDescription>
-              The Guild encourages open and undying desire in continuous learning, from daily experiences to its members. This applies not just to different methodologies, emerging technologies, and varying practices in the field, but also for personal growth.
+              Facilitates and assesses prospective Web developers and Guild staff. The Interview Committee helps find
+              culture-fit, exceptional, and determined people to deliver world-class output.
             </CoreValueDescription>
+            <CoreValueCtaWrapper>
+              <Cta
+                to="/about"
+              >
+                Apply
+              </Cta>
+            </CoreValueCtaWrapper>
           </CoreValueCell>
         </CoreValuesWrapper>
       </Content>
@@ -116,4 +163,4 @@ function CoreValuesSection(props) {
   )
 }
 
-export default CoreValuesSection
+export default CommitteesSection
